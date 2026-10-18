@@ -10,7 +10,14 @@ Most data pipelines fail quietly. A row lands, a number looks plausible, and nob
 until it has been reported to someone. This kit exists to make that failure mode loud.
 
 It is deliberately **standard-library only** — no dependencies, nothing to install, nothing to upgrade.
-Copy the `src/validation_kit` folder into your project, or `pip install -e .`.
+Copy the `src/validation_kit` folder into your project, or install the package in one line:
+
+```bash
+pip install git+https://github.com/devops-gm88/sheets-data-validation-kit.git
+```
+
+Not on PyPI yet - the GitHub URL above is the install. From a clone:
+`pip install -e .`.
 
 ## The three ideas
 
