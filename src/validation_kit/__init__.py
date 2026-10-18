@@ -2,9 +2,9 @@
 
 Standard library only, deliberately.
 """
-from .contract import Field, RowContract, ValidationResult, Min, Max, Range, Pattern, OneOf, NotBlank
-from .reconcile import Assertion, Reconcile, Outcome
-from .entities import resolve, ResolutionOutcome
+from .contract import Field, Max, Min, NotBlank, OneOf, Pattern, Range, RowContract, ValidationResult
+from .entities import ResolutionOutcome, resolve
+from .reconcile import Assertion, Outcome, Reconcile
 
 __version__ = "0.1.0"
 

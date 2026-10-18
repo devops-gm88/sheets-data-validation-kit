@@ -1,5 +1,9 @@
 # sheets-data-validation-kit
 
+[![CI](https://github.com/devops-gm88/sheets-data-validation-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/devops-gm88/sheets-data-validation-kit/actions/workflows/ci.yml)
+[![Python versions](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue)](pyproject.toml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
+
 Validation, reconciliation and entity-resolution primitives for spreadsheet and CSV pipelines.
 
 Most data pipelines fail quietly. A row lands, a number looks plausible, and nobody notices it is wrong
@@ -75,9 +79,22 @@ written more than once, extracted so they are not written again.
 
 ## Tests
 
+Install first, then run:
+
 ```bash
+pip install -e .
 python3 -m unittest discover -s tests -v
 ```
+
+Or without installing anything:
+
+```bash
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+```
+
+Both give **24 tests, OK**. Running `unittest` from a fresh clone without one of
+those two steps fails to import the package — that is a packaging path, not a
+test failure.
 
 ## License
 

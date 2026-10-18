@@ -9,7 +9,36 @@ description = "Validation, reconciliation and entity-resolution primitives for s
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Quality Assurance",
+]
+# No dependencies, on purpose: the standard library is the whole stack.
 dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/devops-gm88/sheets-data-validation-kit"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 110
+
+[tool.ruff.lint]
+# UP is deliberately not selected: the source keeps `typing.Optional` / `List`
+# annotations on purpose, and rewriting them would be churn with no behaviour change.
+select = ["E", "F", "W", "I", "B"]

@@ -8,7 +8,7 @@ Suspects are surfaced for a person to decide, not resolved by a heuristic.
 """
 from __future__ import annotations
 
-from collections import Counter, defaultdict
+from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 

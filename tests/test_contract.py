@@ -1,6 +1,6 @@
 import unittest
 
-from validation_kit import Field, RowContract, Min, Range, Pattern, OneOf, NotBlank
+from validation_kit import Field, Min, NotBlank, OneOf, Pattern, Range, RowContract
 
 
 class TestRowContract(unittest.TestCase):
